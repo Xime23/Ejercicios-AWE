@@ -1,0 +1,15 @@
+<ul class="product-card">
+    <li [ngClass]="{'onSale': product.onSale}" (click)="selectProduct(product)">
+      {{ product.name }} - ${{ product.price }}
+      <span *ngIf="!product.inStock" class="outStock">(Agotado)</span>
+    </li>
+</ul>
+
+<app-product-detail *ngIf="selectedProduct" [product]="selectedProduct"></app-product-detail>
+
+  
+  
+  
+  
+
+  
